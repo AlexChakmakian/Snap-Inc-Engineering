@@ -48,9 +48,6 @@ let players = [
     position: "Forward",
     achievements: "8x Ballon dOr, World Cup champion, 4x Champions League",
     country: "Argentina",
-    birthYear: 1987,
-    goals: 821,
-    assists: 363,
     careerHighlights: [
       "Set record for most goals in a calendar year (91 in 2012)",
       "Most goals for a single club (672 for Barcelona)",
@@ -63,8 +60,7 @@ let players = [
     team: "Al Nassr (previously Real Madrid, Man United, Juventus)",
     position: "Forward",
     achievements: "5x Ballon d'Or, 5x Champions League, Euro 2016 champion",
-    country: "Portugal",
-    birthYear: 1985,
+     country: "Portugal",
     careerHighlights: [
       "All-time top goalscorer in men's international football",
       "Most Champions League goals (140+)",
@@ -78,7 +74,6 @@ let players = [
     position: "Attacking Midfielder / Second Striker",
     achievements: "World Cup winner 1986, 'Goal of the Century' scorer",
     country: "Argentina",
-    birthYear: 1960,
     careerHighlights: [
       "Led Argentina to World Cup victory in 1986",
       "Famous 'Hand of God' goal against England",
@@ -92,7 +87,6 @@ let players = [
     position: "Attacking Midfielder",
     achievements: "World Cup winner 1998, 3x FIFA World Player of the Year",
     country: "France",
-    birthYear: 1972,
     careerHighlights: [
       "Scored two goals in 1998 World Cup final",
       "Famous volley goal in Champions League final",
@@ -106,8 +100,6 @@ let players = [
     position: "Forward",
     achievements: "3x World Cup winner (1958, 1962, 1970), 1000+ goals",
     country: "Brazil",
-    birthYear: 1940,
-    goals: 1279,
     assists: "N/A",
     careerHighlights: [
       "Only player to win three World Cups",
@@ -122,7 +114,6 @@ let players = [
     position: "Striker",
     achievements: "Over 500 career goals, 12 league titles across 4 countries",
     country: "Sweden",
-    birthYear: 1981,
     careerHighlights: [
       "Scored over 500 career goals across top European leagues",
       "Won league titles in Netherlands, Italy, Spain, and France",
@@ -136,7 +127,6 @@ let players = [
     position: "Forward / Left Winger",
     achievements: "Olympic gold medal, Champions League winner",
     country: "Brazil",
-    birthYear: 1992,
     careerHighlights: [
       "Part of Barcelona's legendary 'MSN' trio with Messi and Suárez",
       "Most expensive transfer in football history (€222M to PSG)",
@@ -150,7 +140,6 @@ let players = [
     position: "Striker",
     achievements: "2x World Cup winner, 2x Ballon d'Or, 3x FIFA World Player of the Year",
     country: "Brazil",
-    birthYear: 1976,
     careerHighlights: [
       "Known as 'O Fenômeno' (The Phenomenon) for his speed and finishing",
       "Youngest player to win FIFA World Player of the Year",
@@ -164,7 +153,6 @@ let players = [
     position: "Attacking Midfielder / Forward",
     achievements: "World Cup winner 2002, Ballon d'Or, 2x FIFA World Player of the Year",
     country: "Brazil",
-    birthYear: 1980,
     careerHighlights: [
       "Known for his creativity, technical skills and joyful style of play",
       "Led Barcelona to Champions League victory in 2006",
@@ -178,7 +166,6 @@ let players = [
     position: "Forward",
     achievements: "World Cup winner 2018, 5x Ligue 1 titles, Golden Boy Award",
     country: "France",
-    birthYear: 1998,
     careerHighlights: [
       "Second teenager after Pelé to score in a World Cup final",
       "Youngest player to reach 40 Champions League goals",
@@ -192,7 +179,6 @@ let players = [
     position: "Central Midfielder",
     achievements: "World Cup winner 2010, 2x Euro champion, 4x Champions League",
     country: "Spain",
-    birthYear: 1984,
     careerHighlights: [
       "Scored the winning goal in the 2010 World Cup final",
       "Key part of Barcelona's tiki-taka era under Pep Guardiola",
@@ -206,7 +192,6 @@ let players = [
     position: "Central Midfielder",
     achievements: "World Cup winner 2010, 2x Euro champion, 4x Champions League",
     country: "Spain",
-    birthYear: 1980,
     careerHighlights: [
       "Master of tiki-taka style and considered one of the greatest midfielders ever",
       "Holds Barcelona's record for most appearances (767)",
@@ -315,7 +300,8 @@ function removeLastCard() {
 
 function filterByCountry() {
   const country = prompt("Enter country to filter by (e.g., Argentina, Brazil, France):");
-  if (!country) return;
+  if (!country) 
+      return;
 
   const filteredPlayers = players.filter(player => player.country.toLowerCase() == country.toLowerCase());
 

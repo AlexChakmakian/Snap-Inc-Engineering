@@ -23,17 +23,6 @@
  *
  */
 
-const MESSI_URL = 
-"https://upload.wikimedia.org/wikipedia/commons/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg";
-const RONALDO_URL = 
-"https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg";
-const MARADONA_URL = 
-"https://upload.wikimedia.org/wikipedia/commons/2/2c/Maradona-Mundial_86_con_la_copa.JPG";
-const ZIDANE_URL = 
-"https://upload.wikimedia.org/wikipedia/commons/f/f3/Zinedine_Zidane_by_Tasnim_03.jpg";
-const PELE_URL = 
-"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Pele_con_brasil_%28cropped%29.jpg/250px-Pele_con_brasil_%28cropped%29.jpg";
-
 // Hashmap/dictionary for Country Flags
 const countryFlags = {
   "Argentina": "🇦🇷",
@@ -44,16 +33,17 @@ const countryFlags = {
   "Spain": "🇪🇸",
   "Italy": "🇮🇹",
   "Germany": "🇩🇪",
-  "England": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+  "England": "🇬🇧",
   "Uruguay": "🇺🇾",
   "USA": "🇺🇸",
+  "Sweden": "🇸🇪",
 };
 
 // Player Data
 let players = [
   {
     name: "Lionel Messi",
-    imageURL: MESSI_URL,
+    imageURL: "https://upload.wikimedia.org/wikipedia/commons/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg",
     team: "Inter Miami CF (previously Barcelona, PSG)",
     position: "Forward",
     achievements: "8x Ballon dOr, World Cup champion, 4x Champions League",
@@ -69,14 +59,12 @@ let players = [
   },
   {
     name: "Cristiano Ronaldo",
-    imageURL: RONALDO_URL,
+    imageURL: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg",
     team: "Al Nassr (previously Real Madrid, Man United, Juventus)",
     position: "Forward",
     achievements: "5x Ballon d'Or, 5x Champions League, Euro 2016 champion",
     country: "Portugal",
     birthYear: 1985,
-    goals: 873,
-    assists: 285,
     careerHighlights: [
       "All-time top goalscorer in men's international football",
       "Most Champions League goals (140+)",
@@ -85,14 +73,12 @@ let players = [
   },
   {
     name: "Diego Maradona",
-    imageURL: MARADONA_URL,
+    imageURL: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Maradona-Mundial_86_con_la_copa.JPG",
     team: "Napoli/Argentina (retired)",
     position: "Attacking Midfielder / Second Striker",
     achievements: "World Cup winner 1986, 'Goal of the Century' scorer",
     country: "Argentina",
     birthYear: 1960,
-    goals: 310,
-    assists: 212,
     careerHighlights: [
       "Led Argentina to World Cup victory in 1986",
       "Famous 'Hand of God' goal against England",
@@ -101,14 +87,12 @@ let players = [
   },
   {
     name: "Zinedine Zidane",
-    imageURL: ZIDANE_URL,
+    imageURL: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Zinedine_Zidane_by_Tasnim_03.jpg",
     team: "Real Madrid/Juventus (retired)",
     position: "Attacking Midfielder",
     achievements: "World Cup winner 1998, 3x FIFA World Player of the Year",
     country: "France",
     birthYear: 1972,
-    goals: 125,
-    assists: 178,
     careerHighlights: [
       "Scored two goals in 1998 World Cup final",
       "Famous volley goal in Champions League final",
@@ -117,7 +101,7 @@ let players = [
   },
   {
     name: "Pelé",
-    imageURL: PELE_URL,
+    imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Pele_con_brasil_%28cropped%29.jpg/250px-Pele_con_brasil_%28cropped%29.jpg",
     team: "Santos/Brazil (retired)",
     position: "Forward",
     achievements: "3x World Cup winner (1958, 1962, 1970), 1000+ goals",
@@ -129,6 +113,104 @@ let players = [
       "Only player to win three World Cups",
       "Youngest World Cup winner at age 17",
       "Named FIFA Player of the Century"
+    ]
+  },
+  {
+    name: "Zlatan Ibrahimović",
+    imageURL: "https://upload.wikimedia.org/wikipedia/commons/0/09/Zlatan_Ibrahimovi%C4%87_June_2018.jpg",
+    team: "AC Milan (retired)",
+    position: "Striker",
+    achievements: "Over 500 career goals, 12 league titles across 4 countries",
+    country: "Sweden",
+    birthYear: 1981,
+    careerHighlights: [
+      "Scored over 500 career goals across top European leagues",
+      "Won league titles in Netherlands, Italy, Spain, and France",
+      "Known for spectacular bicycle kicks and acrobatic goals"
+    ]
+  },
+  {
+    name: "Neymar Jr.",
+    imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Neymar_850_1705.jpg/250px-20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Neymar_850_1705.jpg",
+    team: "Al Hilal (previously Barcelona, PSG)",
+    position: "Forward / Left Winger",
+    achievements: "Olympic gold medal, Champions League winner",
+    country: "Brazil",
+    birthYear: 1992,
+    careerHighlights: [
+      "Part of Barcelona's legendary 'MSN' trio with Messi and Suárez",
+      "Most expensive transfer in football history (€222M to PSG)",
+      "Led Santos to their first Copa Libertadores since Pelé era"
+    ]
+  },
+  {
+    name: "Ronaldo Nazário",
+    imageURL: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Ronaldo_2002_cropped.jpg",
+    team: "Real Madrid/Barcelona/Inter/Brazil (retired)",
+    position: "Striker",
+    achievements: "2x World Cup winner, 2x Ballon d'Or, 3x FIFA World Player of the Year",
+    country: "Brazil",
+    birthYear: 1976,
+    careerHighlights: [
+      "Known as 'O Fenômeno' (The Phenomenon) for his speed and finishing",
+      "Youngest player to win FIFA World Player of the Year",
+      "Overcame serious knee injuries to win 2002 World Cup"
+    ]
+  },
+  {
+    name: "Ronaldinho",
+    imageURL: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Ronaldinho_in_2019.jpg",
+    team: "Barcelona/AC Milan/PSG/Brazil (retired)",
+    position: "Attacking Midfielder / Forward",
+    achievements: "World Cup winner 2002, Ballon d'Or, 2x FIFA World Player of the Year",
+    country: "Brazil",
+    birthYear: 1980,
+    careerHighlights: [
+      "Known for his creativity, technical skills and joyful style of play",
+      "Led Barcelona to Champions League victory in 2006",
+      "Received standing ovation from Real Madrid fans at Santiago Bernabéu"
+    ]
+  },
+  {
+    name: "Kylian Mbappé",
+    imageURL: "https://upload.wikimedia.org/wikipedia/commons/5/57/2019-07-17_SG_Dynamo_Dresden_vs._Paris_Saint-Germain_by_Sandro_Halank%E2%80%93129_%28cropped%29.jpg",
+    team: "Real Madrid (previously PSG, Monaco)",
+    position: "Forward",
+    achievements: "World Cup winner 2018, 5x Ligue 1 titles, Golden Boy Award",
+    country: "France",
+    birthYear: 1998,
+    careerHighlights: [
+      "Second teenager after Pelé to score in a World Cup final",
+      "Youngest player to reach 40 Champions League goals",
+      "Finished as Ligue 1 top scorer for five consecutive seasons"
+    ]
+  },
+  {
+    name: "Andrés Iniesta",
+    imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Andr%C3%A9s_Iniesta.jpg/640px-Andr%C3%A9s_Iniesta.jpg",
+    team: "Barcelona/Vissel Kobe/Spain (retired)",
+    position: "Central Midfielder",
+    achievements: "World Cup winner 2010, 2x Euro champion, 4x Champions League",
+    country: "Spain",
+    birthYear: 1984,
+    careerHighlights: [
+      "Scored the winning goal in the 2010 World Cup final",
+      "Key part of Barcelona's tiki-taka era under Pep Guardiola",
+      "Won 32 trophies with Barcelona, making him the most decorated Spanish footballer"
+    ]
+  },
+  {
+    name: "Xavi Hernández",
+    imageURL: "https://fcb-abj-pre.s3.amazonaws.com/img/jugadors/949_xavi.jpg",
+    team: "Barcelona/Al Sadd/Spain (retired)",
+    position: "Central Midfielder",
+    achievements: "World Cup winner 2010, 2x Euro champion, 4x Champions League",
+    country: "Spain",
+    birthYear: 1980,
+    careerHighlights: [
+      "Master of tiki-taka style and considered one of the greatest midfielders ever",
+      "Holds Barcelona's record for most appearances (767)",
+      "Set record for most assists in La Liga history during his career"
     ]
   }
 ];
@@ -199,6 +281,7 @@ function quoteAlert() {
   const playerPosition = prompt("Enter player position:");
   const playerAchievements = prompt("Enter player achievements:");
 
+  // I put a default image here for added players so it's not blank
   const newPlayer = {
     name: playerName,
     imageURL: "https://i.fbcd.co/products/original/one007e-68-e05-mainpreview-be8eac2abc8dd95b83d040f95ffd023d41d1c5651eaa244f7384b040cce2b1ab.jpg",
@@ -211,7 +294,7 @@ function quoteAlert() {
     ] 
   };
 
-  players.push(newPlayer);
+  players.push(newPlayer); // push a player on to the stack
 
   showCards();
 
@@ -221,7 +304,7 @@ function quoteAlert() {
 
 function removeLastCard() {
   if (players.length > 0) {
-    const removedPlayer = players.pop(); //remove the last player from array
+    const removedPlayer = players.pop(); //removes / pops player from the stack
     showCards();
     alert(`Removed ${removedPlayer.name} from the list of top soccer players!`);
   }
@@ -251,9 +334,18 @@ function filterByCountry() {
     editCardContent(nextCard, player);
     cardContainer.appendChild(nextCard);
   }
+  
+  // to return back to all player
+  const returnButton = document.createElement("button");
+  returnButton.textContent = "Show All Players";
+  returnButton.className = "return-button";
+  returnButton.onclick = function() {
+    showCards();
+    this.remove();
+  };
 
-  
-  
+  cardContainer.insertBefore(returnButton, cardContainer.firstChild);
+
   const flag = countryFlags[country];
   alert(`Showing players from ${country}`);
 }
